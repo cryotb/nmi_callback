@@ -41,7 +41,7 @@ NTSTATUS DriverEntry(PDRIVER_OBJECT drvObj, PUNICODE_STRING regPath)
 
 	memset(g_NmiContext, 0, nmiContextLength);
 
-	HLP_FireNMI(0, g_NmiAffinity); /* this will fire an NMIs on CPU #0 */
+	HLP_FireNMI(0, g_NmiAffinity); /* this will fire an NMI on CPU #0 */
 	HLP_DelayExecutionThread(2); /* can adjust this delay, it's been arbitrarily chosen. */
 
 	for (ULONG i = 0; i < numCores; i++)
