@@ -1,2 +1,4 @@
 # nmi_callback
-Demonstration of triggering non-maskable interrupts using nt&amp;hal API on windows.
+This driver once loaded, will fire an NMI on your first cpu core and attempt to handle it using NMI callback.
+If the NMI was triggered successfully and catched by the callback, you will see following result in WinDbg:
+
