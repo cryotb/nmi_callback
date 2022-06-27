@@ -8,6 +8,6 @@ In order to get this done, i am doing the following:
   1. Allocate KAFFINITY_EX structure.
   2. Pass it to KeInitializeAffinityEx.
   3. Add the CPU core the NMI should be run at to the affinity, by calling KeAddProcessorAffinityEx.
-  4. Finally calling HalSendNMI to send it. i am passing the affinity as parameter.
+  4. Finally calling HalSendNMI to send it. parameter is the affinity of course.
 
 Note that all of these APIs listed above are not publicly documented so there might be inconsistencies on return value, prototype etc...
